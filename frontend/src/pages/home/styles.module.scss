@@ -1,0 +1,28 @@
+
+.container {
+  background-color: var(--primary-color);
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: var(--space-lg);
+  padding: var(--space-lg);
+
+  & > .main {
+    color: pink;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+
+    & > .tasks {
+      flex: 1;
+      background-color: var(--secondary-color);
+      border-radius: var(--space-sm);
+    }
+  }
+
+  @media (max-width: 1050px) {
+    & {
+      grid-template-columns: 1fr;
+    }
+  }
+}

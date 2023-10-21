@@ -1,0 +1,98 @@
+$base-color: #EEEEEE;
+$second-color: #999999;
+$third-color: #fff;
+$fourth-color: #F6F6F6;
+$fifth-color: #D4D4D4;
+$seventh-color: #D9E3A4;
+
+$form-background: #454D6B;
+$title-color: #fff;
+$default-color: #fff;
+
+.form {
+  max-width: 500px;
+  width: 100%;
+  min-height: 510px;
+  background-color: $form-background;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  position: relative;
+  border-radius: var(--space-sm);
+
+  & > h1 {
+    font-size: 4rem;
+    text-align: center;
+    color: $title-color;
+    padding: var(--space-md);
+
+    &::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(to right, transparent 10%, lighten($default-color, 0) 40%, transparent );
+      margin-top: var(--space-sm);
+      background-position: 100%;
+    }
+  }
+
+  & > button[type=submit] {
+    background-color: #337AB7;
+    width: calc(100% - var(--space-md) * 2);
+    color: #fff;
+    padding: var(--space);
+    cursor: pointer;
+    font-size: 1.3rem;
+    margin: 0 auto;
+    margin-top: var(--space-md);
+    outline: none;
+    border: none;
+
+    &:hover {
+      background-color: lighten(#337AB7, 10);
+    }
+  }
+
+  & > .createAccount {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    background-color: #454D6B;
+    height: 9vh;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: var(--space-md);
+    padding: var(--space-lg);
+
+    & > p {
+      font-size: 1.2rem;
+      color: lighten(#454D6B, 40);
+      margin-right: var(--space-md);
+
+    }
+
+    & > button {
+      background-color: #337AB7;
+      font-size: 0.9rem;
+      font-weight: bold;
+      cursor: pointer;
+      padding: var(--space-sm);
+      color: #fff;
+
+      &:hover {
+        background-color: lighten(#337AB7, 10);
+      }
+    }
+  }
+
+  & > .error {
+    color: red;
+    text-align: center;
+    margin-top: var(--space-md);
+  }
+}
+
+

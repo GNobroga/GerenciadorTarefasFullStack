@@ -1,0 +1,77 @@
+$base-color: #6D3D75;
+$border-color: #EEEEEE;
+$tip-color: #0FB3FF;
+$btn-colors: (red, #6D3D75);
+
+.modal {
+  position: absolute;
+  z-index: 666;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 3rem;
+
+  
+
+  & > .form {
+    max-width: 700px;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: var(--space-sm);
+    padding: var(--space-lg);
+    min-height: 300px;
+    border-radius: var(--space-sm);
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.2);
+
+    & > img {
+      transform: none;
+      width: 70px;
+    }
+
+    & > h1 {
+      color: #636D7C;
+      margin-bottom: 0.5rem;
+    }
+
+    & > p {
+      color: darken(#C1C1C1, 30);
+    }
+
+    & > .actions {
+      display: flex;
+      gap: var(--space-lg);
+      margin-top: var(--space-lg);
+    }
+
+    @each $bkg in $btn-colors {
+      $i: index($btn-colors, $bkg);
+
+       button:nth-of-type(#{$i}) {
+        background-color: $bkg;
+        color: white;
+        display: block;
+        min-width: 200px !important;
+        height: 45px;
+        border-radius: var(--space-sm);
+        font-size: 1rem;
+        cursor: pointer;
+
+        &:hover {
+          background-color: lighten($bkg, 3);
+        }
+      }
+    }
+
+   
+  }
+  
+}

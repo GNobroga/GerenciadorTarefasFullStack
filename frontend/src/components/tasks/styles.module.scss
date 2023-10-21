@@ -1,0 +1,28 @@
+
+.scroll {
+  max-height: 78vh;
+  overflow: hidden;
+  overflow-y: auto;
+  padding: var(--space-lg);
+
+  & > .list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-auto-rows: minmax(15vh, 1fr);
+    gap: var(--space-lg);
+  }
+
+  & > .notFound {
+    display: flex;
+    height: 70vh;
+    justify-content: center;
+    align-items: center;
+    color: lighten(#333, 30);
+    font-size: 1.5rem;
+    position: relative;
+    top: 1rem;
+  }
+
+}
+

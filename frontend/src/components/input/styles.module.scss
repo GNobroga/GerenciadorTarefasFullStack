@@ -1,0 +1,31 @@
+$base-color: #D4D4D4;
+$default-color: #fff;
+$input-background: #fff;
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  padding: 0 var(--space-md);
+
+  & > label {
+    font-size: 1.1rem;
+    color: $default-color;
+  }
+
+  & > input {
+    outline: none;
+    padding: var(--space-md);
+    font-size: 1rem;
+    box-shadow: 1px 2px 2px lighten(#000, 80);
+    background-color: $input-background;
+
+    &::placeholder {
+      color: lighten(#000, 60);
+    }
+  }
+  
+  & > .error {
+    color: lighten(red, 30);
+  }
+}

@@ -1,0 +1,59 @@
+.modal {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 666;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  & >form {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    min-height: 300px;
+    width: 100%;
+    flex-direction: column;
+    gap: var(--space-sm);
+    border-radius: var(--space);
+
+    & > h1 {
+      font-size: 1.9rem;
+    }
+
+    & > p {
+      font-size: 1.2rem;
+      color: lighten(#000, 40);
+    }
+
+    & > img {
+      transform: none;
+      max-width: 80px;
+      width: 100%;
+    }
+
+    & > button {
+      background-color: darken(#5FC880, 20) !important;
+      max-width: 200px;
+      height: 45px;
+      width: 100%;
+      margin-top: var(--space-lg) !important;
+      cursor: pointer;
+      color: #fff;
+      border-radius: var(--space-sm);
+      font-size: 1rem;
+
+      &:hover {
+        background-color: lighten(#5FC880, 10) !important; 
+      }
+    }
+    
+  }
+
+}

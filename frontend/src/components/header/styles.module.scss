@@ -1,0 +1,25 @@
+.container {
+  background-color: var(--secondary-color);
+  border-radius: var(--space-sm);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+
+  & > h1 {
+    font-size: 1.6rem;
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    text-transform: capitalize;
+  }
+
+  & > .actions {
+    display: flex;
+    gap: var(--space-md);
+  }
+
+  & > img {
+    height: 30px;
+  }
+}

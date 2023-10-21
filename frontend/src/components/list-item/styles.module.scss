@@ -1,0 +1,32 @@
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: var(--space-lg);
+  font-size: 1.3rem;
+  padding: var(--space-sm);
+  cursor: pointer;
+  padding-left: var(--space-md);
+  background-color: var(--tertiary-color);
+  box-shadow: 1px 2px 5px lighten(#000, 60);
+  border-radius: var(--space-sm);
+  
+  &:hover {
+    background-color: lighten(#F6F6F6, 5);
+    color: #000;
+  }
+
+  &.selected {
+    background-color: var(--primary-color);
+    color: #fff;
+  }
+
+  &.blacklist {
+    background-color: lighten(#333, 20);
+    color: #fff;
+  }
+
+  & > .title {
+    text-transform: capitalize;
+  }
+}

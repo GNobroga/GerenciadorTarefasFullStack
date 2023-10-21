@@ -1,0 +1,16 @@
+$base-color: #EEEEEE;
+$second-color: #3D9DB3;
+$third-color: #C3D5D7;
+$fourth-color: #F6F6F6;
+$fifth-color: #D4D4D4;
+$sixth-color: #E1EAEB;
+$seventh-color: #D9E3A4;
+
+.container {
+  background-color: var(--primary-color);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  padding: var(--space-lg);
+}

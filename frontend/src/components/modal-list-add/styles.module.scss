@@ -1,0 +1,120 @@
+$base-color: #6D3D75;
+$border-color: #EEEEEE;
+$tip-color: red;
+$btn-colors: (darken(#F4F4F4, 17), #454D6B);
+
+.modal {
+  position: absolute;
+  z-index: 666;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  padding: 3rem var(--space-lg);
+  background-color: rgba(0, 0, 0, 0.2);
+  
+
+  & > .form {
+    max-width: 700px;
+    width: 100%;
+    background-color: var(--tertiary-color);
+    border-radius: 1rem;
+
+    & > .title {
+      background-color: var(--primary-color);
+      color: #fff;
+      padding: var(--space-md) var(--space-lg);
+      border-top-left-radius: 1rem;
+      border-top-right-radius: 1rem;
+
+      & > h1 {
+        font-weight: 400;
+        font-size: 1.7rem;
+      }
+    }
+
+    & > .wrapper {
+      display: flex;
+      flex-direction: column;
+      padding: var(--space-lg);
+      gap: var(--space-sm);
+
+      & > label {
+        display: block;
+        font-size: 1.2rem;
+        margin-bottom: var(--space-sm);
+      }
+
+      & > input {
+        width: 100%;
+        resize: none;
+        padding: var(--space-md);
+        font-size: 1rem;
+        outline: none;
+        background-color: #fff;
+        box-shadow: 0 3px 5px lighten(#333, 50);
+        border: 1px solid lighten(#333, 50);
+      }
+
+      & > span {
+        color: $tip-color;
+        font-size: 1rem;
+      }
+    }
+
+    & > .actions {
+      display: flex;
+      justify-content: end;
+      gap: var(--space-md);
+      padding: var(--space-lg);
+
+      & > button {
+        cursor: pointer;
+      }
+
+
+      @each $bkg in $btn-colors {
+        $i: index($btn-colors, $bkg);
+
+        $color: lighten(#333, 10);
+
+        @if $i == 2 {
+          $color: white;
+        }
+
+        & > button:nth-of-type(#{$i}) {
+          background-color: $bkg;
+          color: $color;
+          max-width: 120px;
+          width: 100%;
+          height: 40px;
+          border-radius: var(--space-sm);
+          font-size: 1rem;
+
+          & > img {
+            transform: none;
+          }
+
+          &:hover {
+            background-color: lighten($bkg, 4);
+          }
+        }
+      }
+
+      & > .saveButton {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: var(--space-sm);
+        & > img {
+          width: 20px;
+        }
+      }
+      
+    }
+  }
+  
+}

@@ -1,0 +1,38 @@
+
+$spinner-width: 10px;
+$spinner-background: #eee;
+
+.loading {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  flex-direction: column;
+  gap: var(--space-lg);
+  color: white;
+  font-size: 1.3rem;
+
+  & > .spinner {
+    width: 150px;
+    height: 150px;
+    border: $spinner-width solid $spinner-background;
+    border-bottom: $spinner-width solid transparent;
+    border-radius: 50%;
+    animation: spinnerFrames 0.5s  linear infinite;
+  }
+
+}
+
+@keyframes spinnerFrames {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
